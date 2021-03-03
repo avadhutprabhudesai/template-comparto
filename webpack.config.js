@@ -1,0 +1,57 @@
+const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].bundle.js',
+  },
+  devServer: {
+    compress: true,
+    port: 3000,
+  },
+  devtool: 'eval',
+  resolve: {
+    extensions: ['*', '.js'],
+  },
+  module: {
+    rules: [
+      {
+        test: /\.png/,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.scss$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.js/,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
+      },
+    ],
+  },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'index.html',
+      inject: 'body',
+    }),
+    new MiniCssExtractPlugin(),
+    new ESLintPlugin({
+      exclude: 'node_modules',
+      failOnWarning: true,
+    }),
+    new StylelintPlugin({
+      emitError: true,
+      emitWarning: true,
+      failOnError: true,
+      failOnWarning: true,
+    }),
+  ],
+};
