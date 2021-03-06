@@ -1,5 +1,8 @@
+@import './base';
 @import './variables';
+@import './components/header';
 
-h1 {
-  color: $color;
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
 }
