@@ -6,6 +6,11 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
+  /**
+   * Setting target as 'web' is important
+   * Without this, webpack-dev-server does not work with .browserslistrc file
+   */
+  target: 'web',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -47,11 +52,11 @@ module.exports = {
       exclude: 'node_modules',
       failOnWarning: true,
     }),
-    new StylelintPlugin({
-      emitError: true,
-      emitWarning: true,
-      failOnError: true,
-      failOnWarning: true,
-    }),
+    // new StylelintPlugin({
+    //   emitError: true,
+    //   emitWarning: true,
+    //   failOnError: true,
+    //   failOnWarning: true,
+    // }),
   ],
 };
