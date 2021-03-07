@@ -1,0 +1,43 @@
+@import '../variables';
+
+.about {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: center;
+  justify-items: center;
+
+  &__banner {
+    justify-self: center;
+    max-width: 60rem;
+    width: 100%;
+  }
+
+  &__description {
+    display: grid;
+    grid-gap: 3.5rem;
+    justify-items: start;
+    align-content: start;
+    height: 100%;
+    max-width: 60rem;
+    background-color: $color-porcelain;
+    padding: 3rem 4rem;
+
+    &__heading {
+      color: $color-mine-shaft;
+      font-size: 2.4rem;
+    }
+    &__info {
+      color: $color-dove-gray-dark;
+      font-size: 1.8rem;
+    }
+    &__more {
+      font-size: 1.7rem;
+      letter-spacing: 1.1px;
+      color: $color-white;
+      background-color: $color-eunry;
+      padding: 1.8rem 3rem;
+      cursor: pointer;
+    }
+  }
+}

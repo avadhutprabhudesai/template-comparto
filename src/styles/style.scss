@@ -1,8 +1,11 @@
 @import './base';
 @import './variables';
 @import './components/header';
+@import './components/about';
 
 .container {
   max-width: 120rem;
   margin: 0 auto;
+  display: grid;
+  grid-gap: 4rem;
 }
