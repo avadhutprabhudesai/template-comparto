@@ -22,13 +22,17 @@ module.exports = {
   },
   devtool: 'eval',
   resolve: {
-    extensions: ['*', '.js'],
+    extensions: ['.js', '.json', '.scss', '.css'],
+    alias: {
+      assets: path.join(__dirname, 'src/assets'),
+    },
   },
   module: {
     rules: [
       {
-        test: /\.png/,
-        type: 'asset/resource',
+        test: /\.png|jpg/,
+        type: 'asset',
+        parser: { dataUrlCondition: { maxSize: 15000 } },
       },
       {
         test: /\.scss$/,
