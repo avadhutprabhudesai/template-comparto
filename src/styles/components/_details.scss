@@ -1,0 +1,71 @@
+@import '../variables';
+
+.details {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 2fr 3fr;
+  justify-items: stretch;
+
+  @media (max-width: 991px) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr 1fr;
+
+    @media (max-width: 991px) {
+      grid-gap: 3rem;
+    }
+    &__heading {
+      color: $color-mine-shaft;
+      font-size: 2.4rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    &__block {
+      display: grid;
+      grid-template-columns: 80%;
+      font-size: 1.8rem;
+      justify-content: center;
+      align-content: space-evenly;
+
+      @media (max-width: 991px) {
+        grid-template-columns: 50%;
+      }
+
+      &__text {
+        color: $color-dove-gray-dark;
+        font-size: 1.8rem;
+
+        &--italic {
+          font-style: italic;
+          color: $color-mine-shaft;
+          line-height: 1.7;
+        }
+      }
+
+      &__more {
+        background-color: $color-nevada;
+        color: $color-white;
+        padding: 1.5rem 4rem;
+        justify-self: center;
+      }
+
+      &--dark {
+        background-color: $color-alto;
+
+        @media (max-width: 991px) {
+          padding: 5rem 0;
+          grid-gap: 5rem;
+        }
+      }
+    }
+  }
+
+  &__banner {
+    max-width: 60rem;
+  }
+}
