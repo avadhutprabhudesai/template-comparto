@@ -7,6 +7,10 @@
   justify-content: center;
   justify-items: center;
 
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
   &__banner {
     justify-self: center;
     max-width: 60rem;

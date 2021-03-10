@@ -4,7 +4,7 @@
   "rules": {
     "order/properties-alphabetical-order": null,
     "color-hex-length": "long",
-    "max-nesting-depth": 4,
+    "max-nesting-depth": 8,
     "value-list-comma-newline-after": null
   }
 }
