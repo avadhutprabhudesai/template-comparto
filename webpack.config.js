@@ -30,9 +30,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.png|jpg/,
-        type: 'asset',
-        parser: { dataUrlCondition: { maxSize: 15000 } },
+        test: /\.(png|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
       },
       {
         test: /\.scss$/,
