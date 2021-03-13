@@ -7,7 +7,7 @@
 
   &__header {
     display: grid;
-    padding: 3rem;
+    padding: 3rem 1rem;
     grid-gap: 3rem;
   }
   &__title {
@@ -16,12 +16,20 @@
   }
   &__nav {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    justify-items: center;
-    width: 50%;
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+    width: 60%;
     justify-self: center;
+    justify-items: center;
     grid-gap: 3rem;
     list-style: none;
+
+    @media (max-width: 991px) {
+      width: 80%;
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+    }
   }
   &__link {
     font-size: 1.8rem;

@@ -18,6 +18,11 @@
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     padding: 3rem;
     background-color: $color-white;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+      padding: 0;
+    }
   }
 
   &__form {
@@ -26,6 +31,9 @@
     padding: 3rem 5rem;
     background-color: $color-concrete;
     color: $color-oslo-gray;
+    @media (max-width: 767px) {
+      padding: 2rem 0;
+    }
   }
 
   &__input {
@@ -34,6 +42,9 @@
     background-color: transparent;
     padding: 1rem;
     font-size: 1.8rem;
+    @media (max-width: 767px) {
+      padding: 0;
+    }
   }
 
   &__message {
@@ -43,7 +54,9 @@
     height: 10rem;
     font-size: 1.8rem;
     padding: 1rem;
-
+    @media (max-width: 767px) {
+      padding: 0;
+    }
     &::placeholder {
       font-size: 1.8rem;
     }
@@ -71,6 +84,9 @@
     color: $color-dove-gray-dark;
     font-size: 1.8rem;
     line-height: 1.6;
+    @media (max-width: 767px) {
+      padding: 3rem 1rem;
+    }
   }
 
   &__action {
