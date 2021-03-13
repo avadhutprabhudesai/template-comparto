@@ -7,6 +7,10 @@
   padding: 3rem;
   color: $color-dove-gray-dark;
 
+  @media (max-width: 767px) {
+    padding: 0;
+  }
+
   &__icons {
     display: grid;
     grid-gap: 3rem;
