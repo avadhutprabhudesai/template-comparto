@@ -1,0 +1,81 @@
+@import '../variables';
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10rem auto 5rem;
+  background-color: $color-de-york;
+
+  &__heading {
+    place-self: center;
+    font-size: 2.4rem;
+    color: $color-white;
+  }
+
+  &__section {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    padding: 3rem;
+    background-color: $color-white;
+  }
+
+  &__form {
+    display: grid;
+    grid-gap: 2.5rem;
+    padding: 3rem 5rem;
+    background-color: $color-concrete;
+    color: $color-oslo-gray;
+  }
+
+  &__input {
+    border: 0;
+    border-bottom: 1px solid $color-oslo-gray;
+    background-color: transparent;
+    padding: 1rem;
+    font-size: 1.8rem;
+  }
+
+  &__message {
+    border: 0;
+    border-bottom: 1px solid $color-oslo-gray;
+    background-color: transparent;
+    height: 10rem;
+    font-size: 1.8rem;
+    padding: 1rem;
+
+    &::placeholder {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__submit {
+    justify-self: end;
+    padding: 1.3rem 4rem;
+    font-size: 1.8rem;
+    color: $color-white;
+    background: $color-de-york;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-spring-leaves;
+    }
+  }
+
+  &__details {
+    display: grid;
+    grid-gap: 3rem;
+    align-items: center;
+    padding: 5rem;
+    background-color: $color-concrete;
+    color: $color-dove-gray-dark;
+    font-size: 1.8rem;
+    line-height: 1.6;
+  }
+
+  &__action {
+    &:hover {
+      color: $color-eunry;
+    }
+  }
+}
