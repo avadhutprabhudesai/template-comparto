@@ -28,3 +28,12 @@ a {
   color: inherit;
   font-size: inherit;
 }
+
+input,
+textarea {
+  font-family: inherit;
+  border: 0;
+  &:focus {
+    outline: none;
+  }
+}
