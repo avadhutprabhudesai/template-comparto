@@ -1,0 +1,16 @@
+@import './abstracts/variables';
+
+@import './base/normalize';
+@import './base/reset.local';
+@import './base/typography';
+@import './base/spacings';
+
+@import './pages/header';
+@import './pages/about';
+@import './pages/services';
+@import './pages/details';
+@import './pages/gallery';
+@import './pages/contact';
+@import './pages/footer';
+
+@import './layout/container';

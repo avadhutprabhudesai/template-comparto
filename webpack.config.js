@@ -59,11 +59,11 @@ module.exports = {
       exclude: 'node_modules',
       failOnWarning: true,
     }),
-    // new StylelintPlugin({
-    //   emitError: true,
-    //   emitWarning: true,
-    //   failOnError: true,
-    //   failOnWarning: true,
-    // }),
+    new StylelintPlugin({
+      emitError: true,
+      emitWarning: true,
+      failOnError: true,
+      failOnWarning: true,
+    }),
   ],
 };

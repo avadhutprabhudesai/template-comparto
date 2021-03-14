@@ -1,5 +1,3 @@
-@import '../variables';
-
 .contact {
   display: grid;
   grid-template-columns: 1fr;
@@ -8,13 +6,13 @@
 
   &__heading {
     place-self: center;
-    font-size: 2.4rem;
-    color: $color-white;
+    font-size: $font-size-section-heading;
+    color: $font-color-white;
   }
 
   &__section {
     display: grid;
-    grid-gap: 2rem;
+    grid-gap: $gutter-sm;
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     padding: 3rem;
     background-color: $color-white;
@@ -27,10 +25,10 @@
 
   &__form {
     display: grid;
-    grid-gap: 2.5rem;
+    grid-gap: $gutter-sm;
     padding: 3rem 5rem;
     background-color: $color-concrete;
-    color: $color-oslo-gray;
+    color: $font-color-text;
     @media (max-width: 767px) {
       padding: 2rem 0;
     }
@@ -41,7 +39,7 @@
     border-bottom: 1px solid $color-oslo-gray;
     background-color: transparent;
     padding: 1rem;
-    font-size: 1.8rem;
+    font-size: $font-size-plain-text;
     @media (max-width: 767px) {
       padding: 0;
     }
@@ -52,21 +50,21 @@
     border-bottom: 1px solid $color-oslo-gray;
     background-color: transparent;
     height: 10rem;
-    font-size: 1.8rem;
+    font-size: $font-size-plain-text;
     padding: 1rem;
     @media (max-width: 767px) {
       padding: 0;
     }
     &::placeholder {
-      font-size: 1.8rem;
+      font-size: $font-size-plain-text;
     }
   }
 
   &__submit {
     justify-self: end;
     padding: 1.3rem 4rem;
-    font-size: 1.8rem;
-    color: $color-white;
+    font-size: $font-size-plain-text;
+    color: $font-color-white;
     background: $color-de-york;
     cursor: pointer;
 
@@ -77,12 +75,12 @@
 
   &__details {
     display: grid;
-    grid-gap: 3rem;
+    grid-gap: $gutter-md;
     align-items: center;
     padding: 5rem;
     background-color: $color-concrete;
-    color: $color-dove-gray-dark;
-    font-size: 1.8rem;
+    color: $font-color-text;
+    font-size: $font-size-plain-text;
     line-height: 1.6;
     @media (max-width: 767px) {
       padding: 3rem 1rem;
@@ -91,7 +89,7 @@
 
   &__action {
     &:hover {
-      color: $color-eunry;
+      color: $font-color-highlight;
     }
   }
 }

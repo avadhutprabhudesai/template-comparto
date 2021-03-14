@@ -1,5 +1,3 @@
-@import '../variables';
-
 .services {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -9,12 +7,12 @@
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    grid-gap: 5rem;
+    grid-gap: $gutter-xl;
   }
   &__item {
     display: grid;
-    grid-gap: 1.2rem;
+    grid-gap: $gutter-xs;
     text-align: center;
-    color: $color-white;
+    color: $font-color-white;
   }
 }

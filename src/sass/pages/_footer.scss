@@ -1,11 +1,9 @@
-@import '../variables';
-
 .footer {
   display: grid;
-  grid-gap: 4rem;
+  grid-gap: $gutter-lg;
   justify-items: center;
   padding: 3rem;
-  color: $color-dove-gray-dark;
+  color: $font-color-text;
 
   @media (max-width: 767px) {
     padding: 0;
@@ -13,7 +11,7 @@
 
   &__icons {
     display: grid;
-    grid-gap: 3rem;
+    grid-gap: $gutter-md;
     grid-template-columns: repeat(4, 1fr);
   }
 
@@ -21,21 +19,21 @@
     background-color: $color-alto;
     padding: 1.2rem;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: $font-size-plain-text;
     cursor: pointer;
 
     &:hover {
-      color: $color-eunry;
+      color: $font-color-highlight;
     }
   }
 
   &__copyright {
-    font-size: 2rem;
+    font-size: $font-size-plain-text;
     text-align: center;
   }
   &__link {
     &:hover {
-      color: $color-eunry;
+      color: $font-color-highlight;
     }
   }
 }
