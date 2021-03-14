@@ -1,4 +1,4 @@
-import './styles/style.scss';
+import './sass/main.scss';
 
 console.log('Webpack powered static site');
 const foo = {};
